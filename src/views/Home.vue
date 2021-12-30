@@ -16,12 +16,27 @@
     </div>
 
     <div class="carousel_box">
-      <el-carousel indicator-position="outside">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item }}</h3>
+      <el-carousel indicator-position="outside" :autoplay=false>
+        <el-carousel-item v-for="item in food_pic" :key="item.id">
+          <img src="../assets/food/food1.jpeg">
+          <!-- <img :src="item.url"> -->
+
+          <div class="text_box">
+            <div class="describe">
+              <div><strong>Fig And Ricotta Oatmeal</strong></div>
+                {{item.describe}}
+            </div>
+          </div>
         </el-carousel-item>
       </el-carousel>
     </div>
+    <div class="recommend_box">
+      <div class="title">
+        <strong>Everyday Meals</strong>
+        <div class="view_all">View all</div>
+      </div>
+
+    </div>    
     <Bar></Bar>
   </div>
 </template>
@@ -37,7 +52,28 @@ export default {
   data(){
     return{
       avatarUrl:'',
-      input:''
+      input:'',
+      food_pic:[{
+        id:1,
+        url:"../assets/food/food1.jpeg",
+        describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value.'
+      },{
+        id:2,
+        url:'../assets/food/food2.jpeg',
+        describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value'
+      },{
+        id:3,
+        url:'../assets/food/food3.jpeg',
+        describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value'
+      }]
+    }
+  },
+  created(){
+    // console.log(this.food_pic[1].url)
+  },
+  methods:{
+    hover(){
+      
     }
   }
 }
@@ -65,7 +101,7 @@ export default {
       // border: 1px solid red;
       .redpoint{
         position: absolute;
-        right:2.5rem;
+        right:2rem;
         width: 7px;
         height: 7px;
         background-color: red;
@@ -83,21 +119,52 @@ export default {
 
   .search_box{
     margin:20px 0;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 2px 11px 39px rgba(160, 159, 159, 0.3);
-    // .el-input__inner{
-    //   border-radius:16px;
-    //   border: 1px red solid;
-    // }
   }
   .carousel_box{
-    height: 340px;
+    height: 400px;
     border-radius: 32px;
     background-color: rgba(255, 255, 255, 1);
-    // box-shadow: 0 30px 20px -12px rgba(160, 159, 159, 0.3);
-    .el-carousel__container{
-      
-    }   
+    img{
+      width: 100%;
+      height: 271px;
+      border-radius:32px;
+    }
+    .text_box{
+      width: 253px;
+      height: 96px;
+      position: relative;
+      top: -70px;
+      margin:0 auto; 
+      background-color: rgba(255, 255, 255, 1);
+      border-radius:5px;
+      box-shadow: 0 25px 30px -15px rgba(160, 159, 159, 0.3);
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      .describe{
+        padding:  0 20px;
+        font-size: 12px;
+        color: #999999;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;/*想省略几行就写几*/
+        -webkit-box-orient: vertical;
+        strong{
+          display: block;
+          margin: 6px 0;
+          font-size: 14px;
+          color: #000;
+        }
+      }
+    }
+  }
+  .recommend_box{
+    .view_all{
+      float:right;
+      color:#F5A623 ;
+      font-size: 14px;
+    }
   }
 }
 </style>
