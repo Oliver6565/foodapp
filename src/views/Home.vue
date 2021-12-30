@@ -1,42 +1,45 @@
 <template>
-  <div class="home">
-    <div class="info_box">
-      <div class="avatar">
-        <div class="redpoint"></div>
-        <img src="../assets/logo.png" width="40px" height="43px">
+<div>
+    <div class="home">
+      <div class="info_box">
+        <div class="avatar">
+          <div class="redpoint"></div>
+          <img src="../assets/img/avatar/头像1.jpg" width="40px" height="43px">
+        </div>
+        <div class="text">
+          <div><strong>Hello,Alex Suprun</strong></div>
+          <div class="location">San France</div>
+        </div>     
+        <div class="clear"></div>
       </div>
-      <div class="text">
-        <div><strong>Hello,Alex Suprun</strong></div>
-        <div class="location">San France</div>
-      </div>     
-      <div class="clear"></div>
-    </div>
-    <div class="search_box">
-      <el-input v-model="input" placeholder="SEARCH FOR MENU"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
-    </div>
+      <div class="search_box">
+        <el-input v-model="input" placeholder="SEARCH FOR MENU"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
+      </div>
+      <div class="carousel_box">
+        <el-carousel indicator-position="outside" :autoplay=false>
+          <el-carousel-item v-for="item in food_pic" :key="item.id">
+            <img src="../assets/img/food/food1.jpeg">
+            <!-- <img :src="item.url"> -->
 
-    <div class="carousel_box">
-      <el-carousel indicator-position="outside" :autoplay=false>
-        <el-carousel-item v-for="item in food_pic" :key="item.id">
-          <img src="../assets/food/food1.jpeg">
-          <!-- <img :src="item.url"> -->
-
-          <div class="text_box">
-            <div class="describe">
-              <div><strong>Fig And Ricotta Oatmeal</strong></div>
-                {{item.describe}}
+            <div class="text_box">
+              <div class="describe">
+                <div><strong>Fig And Ricotta Oatmeal</strong></div>
+                  {{item.describe}}
+              </div>
             </div>
-          </div>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-    <div class="recommend_box">
-      <div class="title">
-        <strong>Everyday Meals</strong>
-        <div class="view_all">View all</div>
+          </el-carousel-item>
+        </el-carousel>
       </div>
-
-    </div>    
+      <div class="recommend_box">
+        <div class="title">
+          <strong>Everyday Meals</strong>
+          <div class="view_all">View all</div>
+        </div>
+        <div class="show_food">
+          
+        </div>
+      </div>    
+    </div>
     <Bar></Bar>
   </div>
 </template>
@@ -55,15 +58,15 @@ export default {
       input:'',
       food_pic:[{
         id:1,
-        url:"../assets/food/food1.jpeg",
+        url:"../assets/img/food/food1.jpeg",
         describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value.'
       },{
         id:2,
-        url:'../assets/food/food2.jpeg',
+        url:'../assets/img/food/food2.jpeg',
         describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value'
       },{
         id:3,
-        url:'../assets/food/food3.jpeg',
+        url:'../assets/img/food/food3.jpeg',
         describe:'Add Italian whey cheese,figs,almonds and honey.sweet and delicious.with high nutritional value'
       }]
     }
@@ -121,12 +124,12 @@ export default {
     margin:20px 0;
   }
   .carousel_box{
-    height: 400px;
+    height: 360px;
     border-radius: 32px;
     background-color: rgba(255, 255, 255, 1);
     img{
       width: 100%;
-      height: 271px;
+      height: 255px;
       border-radius:32px;
     }
     .text_box{
@@ -160,10 +163,17 @@ export default {
     }
   }
   .recommend_box{
+    height: 170px;
+    box-shadow: 0 25px 30px -15px rgba(160, 159, 159, 0.3);
     .view_all{
       float:right;
       color:#F5A623 ;
       font-size: 14px;
+    }
+    .show_food{
+      margin: 5px 0;
+      height: 120px;
+      background-image: url('../assets/bg_blue.jpg');
     }
   }
 }
