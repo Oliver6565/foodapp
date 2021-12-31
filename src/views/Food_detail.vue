@@ -95,7 +95,7 @@ export default {
 .top_bg{
   background-image: url('../assets/img/food/food10.jpg');
   background-repeat: no-repeat;
-  background-position-y: -65%;
+  background-position-y: -60%;
   background-size: 100%;/*按比例缩放*/
   
 }
@@ -171,9 +171,10 @@ export default {
           .materials{
             display: inline-block;
             img{
-              padding-right: 6px;
+              margin-right: 6px;
             }
             .name{
+              position: relative;
               font-size: 12px;
               color: #999999;
               font-family: Verdana, Geneva, Tahoma, sans-serif;;

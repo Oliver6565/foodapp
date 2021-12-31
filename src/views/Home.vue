@@ -13,7 +13,7 @@
         <div class="clear"></div>
       </div>
       <div class="search_box">
-        <el-input v-model="input" placeholder="SEARCH FOR MENU"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
+        <el-input v-model="input" placeholder="Search for menu,ingredients"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
       </div>
       <div class="carousel_box">
         <el-carousel indicator-position="outside" :autoplay=false>

@@ -1,10 +1,10 @@
 <template>
   <div class="bar">
       <div class="icons">
-        <img src="../assets/img/icon/icon0.jpg">
+        <img @click="toHome" src="../assets/img/icon/icon0.jpg">
         <img src="../assets/img/icon/icon1.jpg">
         <img src="../assets/img/icon/icon2.jpg">
-        <img src="../assets/img/icon/icon3.jpg">
+        <img @click="toMall" src="../assets/img/icon/icon3.jpg">
         <img src="../assets/img/icon/icon4.jpg">
       </div>
   </div>
@@ -12,7 +12,18 @@
 
 <script>
 export default {
-
+  methods:{
+    toHome(){
+      this.$router.push({
+        path:"/"
+      })
+    },
+    toMall(){
+        this.$router.push({
+        path:"/Mall"
+      })
+    }
+  }
 }
 </script>
 
@@ -29,8 +40,8 @@ export default {
   // align-items: center;
   .icons{
     img{
-      padding-top: 25px;
-      padding-left: 45px;
+      margin-top: 25px;
+      margin-left: 45px;
     }
   }
 }
