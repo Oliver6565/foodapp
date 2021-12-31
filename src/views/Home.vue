@@ -18,7 +18,7 @@
       <div class="carousel_box">
         <el-carousel indicator-position="outside" :autoplay=false>
           <el-carousel-item v-for="item in food_pic" :key="item.id">
-            <img src="../assets/img/food/food1.jpeg">
+            <img src="../assets/img/food/food1.jpeg" @click="toFoodDetail">
             <!-- <img :src="item.url"> -->
 
             <div class="text_box">
@@ -75,8 +75,8 @@ export default {
     // console.log(this.food_pic[1].url)
   },
   methods:{
-    hover(){
-      
+    toFoodDetail(){
+      this.$router.push({path:"/FoodDetail",query:{}})
     }
   }
 }
@@ -174,6 +174,7 @@ export default {
       margin: 5px 0;
       height: 120px;
       background-image: url('../assets/bg_blue.jpg');
+      background-repeat:no-repeat;
     }
   }
 }
