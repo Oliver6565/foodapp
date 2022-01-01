@@ -3,7 +3,14 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import FoodDetail from '../views/Food_detail.vue'
 import Mall from '../views/Mall.vue'
+import MallDetail from '../views/Mall_detail.vue'
 Vue.use(VueRouter)
+
+
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 
 const routes = [
   {
@@ -23,6 +30,11 @@ const routes = [
     path:'/Mall',
     name:'Mall',
     component: Mall
+  },
+  {
+    path:'/MallDetail',
+    name:'MallDetail',
+    component:MallDetail
   }
   // {
   //   path: '/about',

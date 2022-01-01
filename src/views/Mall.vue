@@ -87,33 +87,33 @@
           </div>
 
           <div class="show_food">
-              <div class="food_list"> 
+              <div class="food_list" @click="toMallDetail"> 
                   <div class="text">
                       <b>Gala</b><br>
                       $ 16.9/catty
                   </div>
-                  <img src="../assets/img/bg/bg_food1.svg">
+                  <img src="../assets/img/food/gala.svg">
               </div>
               <div class="food_list"> 
                   <div class="text">
                       <b>pumpkin</b><br>
                       $ 10.9/catty
                   </div>
-                  <img src="../assets/img/bg/bg_food2.svg">
+                  <img src="../assets/img/food/pumpkin.svg">
               </div>
               <div class="food_list"> 
                   <div class="text">
                       <b>cherry</b><br>
                       $ 30.9/catty
                   </div>
-                  <img src="../assets/img/bg/bg_food3.svg">
+                  <img src="../assets/img/food/cherry.svg">
               </div>
               <div class="food_list"> 
                   <div class="text">
                       <b>Tomato</b><br>
                       $ 18.9/catty
                   </div>
-                  <img src="../assets/img/bg/bg_food4.svg">
+                  <img src="../assets/img/food/tomato.svg">
               </div>
           </div>
       </div>
@@ -133,6 +133,11 @@ export default {
   data(){
       return{
           input:''
+      }
+  },
+  methods:{
+      toMallDetail(){
+          this.$router.push({path:'/MallDetail'})
       }
   }
 }

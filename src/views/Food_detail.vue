@@ -2,7 +2,7 @@
 <div class="top_bg">
     <div class="foodDetail">
       <div class="info_box">
-        <img src="../assets/img/icon/return.svg" width="40px" height="40px" @click="toHome">
+        <div class="left"><img src="../assets/img/icon/return.svg" width="40px" height="40px" @click="toHome"></div>
         <div class="right">
             <img src="../assets/img/icon/like.svg" width="40px" height="40px">
             <img src="../assets/img/icon/share.svg" width="40px" height="40px">
@@ -106,17 +106,22 @@ export default {
   .info_box{
       margin: 0 30px 0;
       height: 135px;
-      // border: 1px solid red;
+    .left{
+      position: relative;
+      display: inline-block;
+      z-index: 999;
+      width:70%;      
+    }
     .right{
-        float: right;
-        img{
-            padding-left:5px;
-        }
+      position: relative;
+      display: inline-block;
+      z-index: 999;
+      width: 30%;
+      img{
+          padding-left:5px;
+      }
     }
-        .clear{
-            clear: both;
-        }
-    }
+  }
   .text_box{   
     background-color: #fff;
     height: 580px;
