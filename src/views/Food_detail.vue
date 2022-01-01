@@ -110,15 +110,15 @@ export default {
       position: relative;
       display: inline-block;
       z-index: 999;
-      width:70%;      
+      width:68%;      
     }
     .right{
       position: relative;
       display: inline-block;
       z-index: 999;
-      width: 30%;
+      width: 32%;
       img{
-          padding-left:5px;
+          padding-left:0.625rem;
       }
     }
   }
