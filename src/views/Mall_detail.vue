@@ -2,7 +2,7 @@
 <div class="top_bg">
     <div class="mallDetail">
       <div class="info_box">
-        <div class="left" @click="toMall"><img src="../assets/img/icon/return.svg" width="40px" height="40px" @click="toMall" ></div>
+        <div class="left"><img src="../assets/img/icon/return.svg" width="40px" height="40px" @click="toMall" ></div>
         <div class="right">
             <img src="../assets/img/icon/like.svg" width="40px" height="40px">
             <img src="../assets/img/icon/share.svg" width="40px" height="40px">
