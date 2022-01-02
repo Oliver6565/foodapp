@@ -5,7 +5,7 @@ import FoodDetail from '../views/Food_detail.vue'
 import Mall from '../views/Mall.vue'
 import MallDetail from '../views/Mall_detail.vue'
 import Profile from '../views/Profile.vue'
-
+import Collection from '../views/Collection.vue'
 Vue.use(VueRouter)
 
 
@@ -42,7 +42,12 @@ const routes = [
     path:'/Profile',
     name:'Profile',
     component:Profile
-  }
+  },
+  {
+    path:'/Collection',
+    name:'Collection',
+    component:Collection
+  } 
   // {
   //   path: '/about',
   //   name: 'About',
