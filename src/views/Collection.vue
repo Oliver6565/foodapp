@@ -63,7 +63,7 @@ export default {
 <style lang="less" scoped>
 
 .collection{
-    background-color: rgb(170, 97, 97);
+    // background-color: rgb(170, 97, 97);
     padding:44px 30px 34px 30px;
     .info_box{
         background-color: #fff;
@@ -91,20 +91,21 @@ export default {
             // 这里的宽度高度是指food_box的宽度和高度。下面那个background-size是指定
             // 背景图的宽度和高度，这样就能够在完全没有添加东西的情况下，显示出完整的背景
             width: 150px;
-            height: 205px;
+            height: 200px;
+            margin: 5px 3px;
             background-image: url('../assets/bg_blue.svg');
-            background-size:150px 205px;
+            background-size:100% 100%;
             background-repeat: no-repeat;
-            // 150+150=300 315-300=15px 分成3块 每块5px；左边偏移5px，形成中心对称
-            background-position-x: 5px;
-            flex: 1;
             font-size: 14px;
+            // flex: 1;
             color: #fff;
             position: relative;
+            border-radius: 1.5rem;
+            box-shadow: 5px 5px 5px rgba(160, 159, 159, 0.3);
             .logo{
                 position: absolute;
-                left: .5rem;
-                top: 0.25rem;
+                left: .4rem;
+                top: 0.2rem;
                 margin-left:8px ;
             }
             .imgbox{
@@ -124,7 +125,7 @@ export default {
             }
             .imgcart{
                 position: absolute;
-                bottom:1rem;
+                bottom:.6rem;
                 right: 1rem;
             }
         }

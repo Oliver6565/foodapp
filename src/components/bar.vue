@@ -3,7 +3,7 @@
       <div class="icons">
         <img @click="toHome" src="../assets/img/icon/icon0.jpg">
         <img @click="toCollection" src="../assets/img/icon/icon1.jpg">
-        <img src="../assets/img/icon/icon2.jpg">
+        <img @click="toCart" src="../assets/img/icon/icon2.jpg">
         <img @click="toMall" src="../assets/img/icon/icon3.jpg">
         <img @click="toProfile" src="../assets/img/icon/icon4.jpg">
       </div>
@@ -21,6 +21,11 @@ export default {
     toCollection(){
         this.$router.push({
         path:"/Collection"
+      })
+    },
+    toCart(){
+      this.$router.push({
+        path:"/Cart"
       })
     },
     toMall(){

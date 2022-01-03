@@ -6,6 +6,7 @@ import Mall from '../views/Mall.vue'
 import MallDetail from '../views/Mall_detail.vue'
 import Profile from '../views/Profile.vue'
 import Collection from '../views/Collection.vue'
+import Cart from '../views/Cart.vue'
 Vue.use(VueRouter)
 
 
@@ -47,7 +48,12 @@ const routes = [
     path:'/Collection',
     name:'Collection',
     component:Collection
-  } 
+  },
+  {
+    path:'/Cart',
+    name:'Cart',
+    component:Cart
+  }
   // {
   //   path: '/about',
   //   name: 'About',
